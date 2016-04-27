@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.seniorproject.web.pojo.User" table="Users">
+		<meta attribute="class-description">
+			This class contains the User table details
+		</meta>
+		<id name="userId" type="integer" column="userId">
+			<generator class="identity" />
+		</id>
+		<property name="firstName" column="firstName" type="string" />
+		<property name="lastName" column="lastName" type="string" />
+		<property name="address" column="address" type="string" />
+		<property name="phone" column="phone" type="string" />
+		<property name="dob" column="dob" type="string" />
+		<property name="email" column="email" type="string" />
+		<property name="ssn" column="ssn" type="string" />
+		<property name="employer" column="employer" type="string" />
+		<property name="salary" column="salary" type="big_decimal" />
+		<property name="requestedAmt" column="requestedAmt" type="big_decimal" />
+		<property name="password" column="password" type="string" />
+		<property name="role" column="role" type="string" />
+		<property name="enabled" column="enabled" type="boolean" />
+		<property name="status" column="status">
+			<type name="org.hibernate.type.EnumType">
+				<param name="enumClass">com.seniorproject.web.pojo.User$Status</param>
+				<param name="useNamed">true</param>
+			</type>
+		</property>
+
+	</class>
+</hibernate-mapping>

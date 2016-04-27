@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE tiles-definitions PUBLIC  
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+    <definition name="MainPageTemplate"
+      template="/WEB-INF/views/tiles_templates/MainPageTemplate.jsp">
+		<put-attribute name="header"  value="/WEB-INF/views/tiles_components/header.jsp" />
+		<put-attribute name="menu" 	  value="/WEB-INF/views/tiles_components/menu.jsp" />
+		<put-attribute name="footer"  value="/WEB-INF/views/tiles_components/footer.jsp" />
+		<put-attribute name="body" 	  value="" />
+	</definition>
+	
+	    <definition name="AdminPageTemplate"
+      template="/WEB-INF/views/tiles_templates/AdminPageTemplate.jsp">
+		<put-attribute name="header"  value="/WEB-INF/views/tiles_components/header.jsp" />
+		<put-attribute name="menu" 	  value="/WEB-INF/views/tiles_components/adminmenu.jsp" />
+		<put-attribute name="footer"  value="/WEB-INF/views/tiles_components/footer.jsp" />
+		<put-attribute name="body" 	  value="" />
+	</definition>
+	
+	<definition name="HomePageTemplate" 
+      template="/WEB-INF/views/tiles_templates/HomeTemplate.jsp">
+		<put-attribute name="header"  value="/WEB-INF/views/tiles_components/header.jsp" />
+		<put-attribute name="body" 	  value="" />
+	</definition>
+	
+	<definition name="index" extends="HomePageTemplate">
+		 <put-attribute name="body"	
+        value="/WEB-INF/views/index.jsp" />
+	</definition>
+	
+	<definition name="login" extends="HomePageTemplate">
+		 <put-attribute name="body"	
+        value="/WEB-INF/views/login.jsp" />
+	</definition>
+	
+	<definition name="register" extends="HomePageTemplate">
+		 <put-attribute name="body"	
+        value="/WEB-INF/views/register.jsp" />
+	</definition>
+	
+	<definition name="request" extends="HomePageTemplate">
+		 <put-attribute name="body"	
+        value="/WEB-INF/views/request.jsp" />
+	</definition>
+	
+	<definition name="mainpage" extends="MainPageTemplate">
+	    <put-attribute name="body"	
+        value="/WEB-INF/views/mainpage.jsp" />
+	</definition>
+	
+	<definition name="loaninfo" extends="MainPageTemplate">
+	    <put-attribute name="body"	
+        value="/WEB-INF/views/loaninfo.jsp" />
+	</definition>
+	
+	<definition name="submitwithdrawalrequest" extends="MainPageTemplate">
+	    <put-attribute name="body"	
+        value="/WEB-INF/views/submitwithdrawal.jsp" />
+	</definition>
+
+	<definition name="viewwithdrawals" extends="MainPageTemplate">
+	    <put-attribute name="body"	
+        value="/WEB-INF/views/viewwithdrawals.jsp" />
+	</definition>
+
+	<definition name="makepayment" extends="MainPageTemplate">
+	    <put-attribute name="body"	
+        value="/WEB-INF/views/makepayment.jsp" />
+	</definition>
+	
+	<definition name="viewpayments" extends="MainPageTemplate">
+	    <put-attribute name="body"	
+        value="/WEB-INF/views/viewpayments.jsp" />
+	</definition>
+	
+	<definition name="activities" extends="MainPageTemplate">
+	    <put-attribute name="body"	
+        value="/WEB-INF/views/view_activities.jsp" />
+	</definition>
+	
+	<definition name="adminPage" extends="AdminPageTemplate">
+	    <put-attribute name="body"	
+        value="/WEB-INF/views/admin_page.jsp" />
+	</definition>
+	
+	<definition name="users" extends="AdminPageTemplate">
+	    <put-attribute name="body"	
+        value="/WEB-INF/views/view_users.jsp" />
+	</definition>
+	
+	<definition name="pendingRequests" extends="AdminPageTemplate">
+	    <put-attribute name="body"	
+        value="/WEB-INF/views/view_pending_requests.jsp" />
+	</definition>
+	
+	<definition name="activeUsers" extends="AdminPageTemplate">
+	    <put-attribute name="body"	
+        value="/WEB-INF/views/view_active_users.jsp" />
+	</definition>
+	
+	<definition name="disabledUsers" extends="AdminPageTemplate">
+	    <put-attribute name="body"	
+        value="/WEB-INF/views/view_disabled_users.jsp" />
+	</definition>
+
+</tiles-definitions>

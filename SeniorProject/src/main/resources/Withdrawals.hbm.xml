@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="com.seniorproject.web.pojo.Withdrawal" table="Withdrawals">
+<meta attribute="class-description">
+This class contains the Withdrawals table detail
+</meta>
+<id name="id" type="integer" column="id">
+			<generator class="identity" />
+		</id>
+		<property name="userId" column="userId" type="integer" />
+		<property name="amount" column="amount" type="big_decimal" />
+		<property name="date" column="date" type="string" />
+		<property name="approvedBy" column="approvedBy" type="string" />
+		<property name="approvalStatus" column="approvalStatus" type="string" />
+		<property name="type" column="type" type="string" />
+		
+		<!-- <many-to-one name="User" class="com.seniorproject.web.pojo.User"
+            column="userId" unique="true" not-null="true"
+            cascade="all" /> -->
+
+</class>
+
+</hibernate-mapping>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="com.seniorproject.web.pojo.Activity" table="Activities">
+<meta attribute="class-description">
+This class contains the Activities detail
+</meta>
+<id name="id" type="integer" column="id">
+			<generator class="identity" />
+</id>
+		<property name="userId" column="userId" type="integer" />
+		<property name="actionPerformed" column="actionPerformed" type="string" />
+		<property name="date" column="date" type="string" />
+
+</class>
+
+</hibernate-mapping>
