@@ -2,8 +2,6 @@ package com.seniorproject.web.service;
 
 import java.util.List;
 
-import javax.transaction.Transactional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -52,13 +50,11 @@ public class UserService extends ParentService {
 		}
 	}
 	
-	@Transactional
 	public void createUser(User user) {
 
 		userDAO.saveUser(user);
 	}
 
-	@Transactional
 	public void submitRequest(User user) throws Exception {
 
 		user.setRole(USER);

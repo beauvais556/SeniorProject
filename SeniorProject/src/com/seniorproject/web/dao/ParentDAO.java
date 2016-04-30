@@ -7,8 +7,8 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.service.ServiceRegistryBuilder;
 
 import com.seniorproject.web.utils.Constants;
 
@@ -16,7 +16,7 @@ public class ParentDAO extends Constants {
 	
 	Configuration configuration = new Configuration().configure();
 	
-	StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties());
+	ServiceRegistryBuilder builder = new ServiceRegistryBuilder().applySettings(configuration.getProperties());
 	
 	SessionFactory factory = configuration.buildSessionFactory(builder.build());
 	
