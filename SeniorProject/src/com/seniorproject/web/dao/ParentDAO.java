@@ -18,7 +18,7 @@ public class ParentDAO extends Constants {
 	
 	ServiceRegistryBuilder builder = new ServiceRegistryBuilder().applySettings(configuration.getProperties());
 	
-	SessionFactory factory = configuration.buildSessionFactory(builder.build());
+	SessionFactory factory = configuration.buildSessionFactory(builder.buildServiceRegistry());
 	
 	
 	protected Integer save(Object object) {
